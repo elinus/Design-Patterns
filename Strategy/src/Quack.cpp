@@ -1,7 +1,7 @@
 #include <Quack.h>
 
-Quack::Quack() {}
+Quack::Quack() = default;
 
-Quack::~Quack() {}
+Quack::~Quack() = default;
 
 void Quack::quack() { std::cout << "Quack" << std::endl; }

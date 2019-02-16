@@ -1,8 +1,8 @@
 #include <Duck.h>
 
-Duck::Duck() {}
+Duck::Duck() = default;
 
-Duck::~Duck() {}
+Duck::~Duck() = default;
 
 void Duck::swim() { std::cout << "All ducks float, even decoys!" << std::endl; }
 

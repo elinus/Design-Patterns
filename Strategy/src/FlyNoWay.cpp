@@ -1,7 +1,7 @@
 #include <FlyNoWay.h>
 
-FlyNoWay::FlyNoWay() {}
+FlyNoWay::FlyNoWay() = default;
 
-FlyNoWay::~FlyNoWay() {}
+FlyNoWay::~FlyNoWay() = default;
 
 void FlyNoWay::fly() { std::cout << "I can't fly" << std::endl; }

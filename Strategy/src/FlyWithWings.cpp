@@ -1,7 +1,7 @@
 #include <FlyWithWings.h>
 
-FlyWithWings::FlyWithWings() {}
+FlyWithWings::FlyWithWings() = default;
 
-FlyWithWings::~FlyWithWings() {}
+FlyWithWings::~FlyWithWings() = default;
 
 void FlyWithWings::fly() { std::cout << "I'm flying!!" << std::endl; }

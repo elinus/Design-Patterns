@@ -1,7 +1,7 @@
 #include <Squeak.h>
 
-Squeak::Squeak() {}
+Squeak::Squeak() = default;
 
-Squeak::~Squeak() {}
+Squeak::~Squeak() = default;
 
 void Squeak::quack() { std::cout << "Squeak" << std::endl; }
