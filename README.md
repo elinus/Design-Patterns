@@ -30,3 +30,14 @@
     that can handle changes because they minimize the interdependency
     between objects.
     ```
+## Decorator Pattern
+* Definition
+    ```sh
+    The Decorator Pattern - attaches additional responsibilities to
+    an object dynamically. Decorators provide a flexible alternative
+    to subclassing for extending functionality.
+    ```
+* OO Design Principles
+    ```sh
+    - Classes should be open for extension, but close for modification.
+    ```
