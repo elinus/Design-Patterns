@@ -3,7 +3,7 @@
 ## Strategy Pattern
 * Definition
     ```sh
-    The Strategy pattern - defines a family of algorithms,
+    The Strategy Pattern - defines a family of algorithms,
     encapsulates each one, and makes them interchangeable.
     Strategy lets the algorithm vary independently from 
     clients that use it.
@@ -16,4 +16,17 @@
     - Program to an interface, not an implementation.
 
     - Fever composition over inheritence.
+    ```
+## Observer Pattern
+* Definition
+    ```sh
+    The Observer Pattern - defines a one-to-many dependency
+    between objects so that when one object changes state,
+    all of its dependents are notified and updated automatically.
+    ```
+* OO Design Principles
+    ```sh
+    - Loosely coupled designs allow us to build flexible OO systems
+    that can handle changes because they minimize the interdependency
+    between objects.
     ```
