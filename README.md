@@ -1,4 +1,4 @@
-# Head-First-Design-Patterns
+# Head-First-Design-Patterns [C++]
 
 ## Strategy Pattern
 * Definition
