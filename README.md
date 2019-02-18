@@ -40,4 +40,40 @@
 * OO Design Principles
     ```sh
     - Classes should be open for extension, but close for modification.
+    
     ```
+##  S.O.L.I.D Principles
+* Single Responsibility Principle(SRP)
+    ```sh
+    A class should have only one reason to change.
+    ```
+
+* Open Closed Principle(OCP)
+    ```sh
+    Software entities like classes, modules and functions should be open 
+    for extension and closed for modifications.
+    ```
+
+* Liscov Substitution Principle(LSP)
+    ```sh
+    Derived types must be completely substitutable for their bases types. 
+    ```
+
+* Interface Segregation Principle(ISP)
+    ```sh
+    Clients should not be forced to depend upon interfaces that they don't use.
+    ```
+
+* Dependency Inversion Principle(DIP)
+    ```sh
+    - High-level modules should not be dependent on low-level modules.
+    Both should be depend on abstractions.
+    - Abstractions should not depend on details. Details should depend on
+    abstraction.
+    ```
+
+
+
+
+
+
