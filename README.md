@@ -1,5 +1,4 @@
-Head-First-Design-Patterns [C++] [![GitHub Stars][stars-img]][stars-url] [![GitHub Forks][forks-img]][forks-url] [![GitHub Watchers][watchers-img]][watchers-url] [![Tweet][tweet-img]][tweet-url]
-
+# Head-First-Design-Patterns [C++]
 
 ## Strategy Pattern
 * Definition
