@@ -36,3 +36,4 @@
 clang-format.sh
 modernize.sh
 run-clang-tidy.py
+compile_commands.json
