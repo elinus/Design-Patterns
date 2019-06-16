@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+
+# Project specific
+*/build/*
+clang-format.sh
+modernize.sh
+run-clang-tidy.py
