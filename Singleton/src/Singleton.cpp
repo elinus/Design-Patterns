@@ -1,4 +1,4 @@
-#include <Singleton/Singleton.h>
+#include <Singleton.h>
 #include <mutex>
 
 std::mutex lock;

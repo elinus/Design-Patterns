@@ -1,4 +1,4 @@
-#include <Singleton/Singleton.h>
+#include <Singleton.h>
 #include <iostream>
 
 int main(int argc, char *argv[]) {
