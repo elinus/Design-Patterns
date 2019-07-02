@@ -10,16 +10,10 @@ void Duck::performFly() { flyBehaviour->fly(); }
 
 void Duck::performQuack() { quackBehaviour->quack(); }
 
-void Duck::setFlyBehaviour(FlyBehaviour *fb) {
-  if (this->flyBehaviour != nullptr) {
-    delete flyBehaviour;
-  }
-  flyBehaviour = fb;
+void Duck::setFlyBehaviour(std::unique_ptr<FlyBehaviour> fb) {
+  flyBehaviour = std::move(fb);
 }
 
-void Duck::setQuackBehaviour(QuackBehaviour *qb) {
-  if (this->quackBehaviour != nullptr) {
-    delete quackBehaviour;
-  }
-  quackBehaviour = qb;
+void Duck::setQuackBehaviour(std::unique_ptr<QuackBehaviour> qb) {
+  quackBehaviour = std::move(qb);
 }

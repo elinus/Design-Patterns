@@ -4,6 +4,7 @@
 #include <FlyBehaviour.h>
 #include <QuackBehaviour.h>
 #include <iostream>
+#include <memory>
 
 class Duck {
 public:
@@ -13,12 +14,12 @@ public:
   void performFly();
   void performQuack();
   void swim();
-  void setFlyBehaviour(FlyBehaviour *fb);
-  void setQuackBehaviour(QuackBehaviour *qb);
+  void setFlyBehaviour(std::unique_ptr<FlyBehaviour> fb);
+  void setQuackBehaviour(std::unique_ptr<QuackBehaviour> qb);
 
 protected:
-  FlyBehaviour *flyBehaviour;
-  QuackBehaviour *quackBehaviour;
+  std::unique_ptr<FlyBehaviour> flyBehaviour;
+  std::unique_ptr<QuackBehaviour> quackBehaviour;
 };
 
 #endif

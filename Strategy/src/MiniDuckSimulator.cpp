@@ -5,11 +5,12 @@
 #include <RedheadDuck.h>
 #include <RubberDuck.h>
 #include <iostream>
+#include <memory>
 
 int main() {
-  Duck *duck;
-  auto *mallard = new MallardDuck();
-  duck = mallard;
+  std::unique_ptr<Duck> duck(new MallardDuck());
+  // auto *mallard = new MallardDuck();
+  // duck = mallard;
   duck->performFly();
   duck->performQuack();
   duck->display();
@@ -17,8 +18,9 @@ int main() {
 
   std::cout << "\n";
 
-  auto *redhead = new RedheadDuck();
-  duck = redhead;
+  duck = std::unique_ptr<Duck>(new RedheadDuck());
+  // auto *redhead = new RedheadDuck();
+  // duck = redhead;
   duck->performFly();
   duck->performQuack();
   duck->display();
@@ -26,8 +28,9 @@ int main() {
 
   std::cout << "\n";
 
-  auto *rubber = new RubberDuck();
-  duck = rubber;
+  duck = std::unique_ptr<Duck>(new RubberDuck());
+  // auto *rubber = new RubberDuck();
+  // duck = rubber;
   duck->performFly();
   duck->performQuack();
   duck->display();
@@ -35,8 +38,9 @@ int main() {
 
   std::cout << "\n";
 
-  auto *decoy = new DecoyDuck();
-  duck = decoy;
+  duck = std::unique_ptr<Duck>(new DecoyDuck());
+  // auto *decoy = new DecoyDuck();
+  // duck = decoy;
   duck->performFly();
   duck->performQuack();
   duck->display();
@@ -44,17 +48,18 @@ int main() {
 
   std::cout << "\n";
 
-  auto *model = new ModelDuck();
-  duck = model;
+  duck = std::unique_ptr<Duck>(new ModelDuck());
+  // auto *model = new ModelDuck();
+  // duck = model;
   duck->performFly();
-  duck->setFlyBehaviour(new FlyRocketPowered());
+  duck->setFlyBehaviour(std::unique_ptr<FlyBehaviour>(new FlyRocketPowered()));
   duck->performFly();
 
-  delete mallard;
-  delete redhead;
-  delete rubber;
-  delete decoy;
-  delete model;
+  // delete mallard;
+  // delete redhead;
+  // delete rubber;
+  // delete decoy;
+  // delete model;
 
   return 0;
 }
