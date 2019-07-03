@@ -1,10 +1,10 @@
-#ifndef __TEA_H__
-#define __TEA_H__
+#ifndef __COFFEE_H__
+#define __COFFEE_H__
 
-#include <TemplateMethod/CaffeineBeverage.h>
+#include <CaffeineBeverage.h>
 #include <string>
 
-class Tea : public CaffeineBeverage {
+class Coffee : public CaffeineBeverage {
 public:
   void brew() override;
   void addCondiments() override;

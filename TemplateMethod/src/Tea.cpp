@@ -1,4 +1,4 @@
-#include <TemplateMethod/Tea.h>
+#include <Tea.h>
 
 void Tea::brew() { std::cout << "Steeping the tea" << std::endl; }
 

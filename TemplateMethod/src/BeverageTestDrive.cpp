@@ -1,5 +1,5 @@
-#include <TemplateMethod/Coffee.h>
-#include <TemplateMethod/Tea.h>
+#include <Coffee.h>
+#include <Tea.h>
 
 int main(int argc, char *argv[]) {
   auto *tea = new Tea();

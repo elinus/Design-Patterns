@@ -1,4 +1,4 @@
-#include <TemplateMethod/CaffeineBeverage.h>
+#include <CaffeineBeverage.h>
 
 void CaffeineBeverage::prepareRecipe() {
   boilWater();

@@ -1,4 +1,4 @@
-#include <TemplateMethod/Coffee.h>
+#include <Coffee.h>
 
 void Coffee::brew() {
   std::cout << "Dripping Coffee through filter" << std::endl;
