@@ -1,20 +1,19 @@
 #include <Singleton.h>
-#include <mutex>
 
-std::mutex lock;
-Singleton *Singleton::instance = nullptr;
+std::mutex Singleton::sLock;
+std::unique_ptr<Singleton> Singleton::sInstance = nullptr;
 
 Singleton::Singleton() {}
 
-Singleton *Singleton::getInstance() {
-  if (instance == nullptr) {
-    lock.lock();
-    if (instance == nullptr) {
-      instance = new Singleton();
+std::unique_ptr<Singleton> Singleton::getInstance() {
+  if (sInstance == nullptr) {
+    sLock.lock();
+    if (sInstance == nullptr) {
+      sInstance = std::unique_ptr<Singleton>(new Singleton());
     }
-    lock.unlock();
+    sLock.unlock();
   }
-  return instance;
+  return std::move(sInstance);
 }
 
 std::string Singleton::getDescription() {
