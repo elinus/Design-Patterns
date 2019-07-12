@@ -1,4 +1,4 @@
-#include <Factory/PizzaStore.h>
+#include <PizzaStore.h>
 
 PizzaStore::PizzaStore(SimplePizzaFactory *factory) { this->factory = factory; }
 

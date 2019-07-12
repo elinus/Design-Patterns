@@ -1,4 +1,4 @@
-#include <Factory/VeggiePizza.h>
+#include <VeggiePizza.h>
 
 VeggiePizza::VeggiePizza() {
   name = "Veggie Pizza";

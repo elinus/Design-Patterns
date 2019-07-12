@@ -1,4 +1,4 @@
-#include <Factory/Pizza.h>
+#include <Pizza.h>
 
 std::string Pizza::getName() { return name; }
 

@@ -1,4 +1,4 @@
-#include <Factory/PepperoniPizza.h>
+#include <PepperoniPizza.h>
 
 PepperoniPizza::PepperoniPizza() {
   name = "Pepperoni Pizza";

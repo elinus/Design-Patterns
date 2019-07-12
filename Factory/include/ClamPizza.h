@@ -1,7 +1,7 @@
 #ifndef __CLAM_PIZZA_H__
 #define __CLAM_PIZZA_H__
 
-#include <Factory/Pizza.h>
+#include <Pizza.h>
 
 class ClamPizza : public Pizza {
 public:

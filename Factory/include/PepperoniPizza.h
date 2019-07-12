@@ -1,7 +1,7 @@
 #ifndef __PEPPERONI_PIZZA_H__
 #define __PEPPERONI_PIZZA_H__
 
-#include <Factory/Pizza.h>
+#include <Pizza.h>
 
 class PepperoniPizza : public Pizza {
 public:

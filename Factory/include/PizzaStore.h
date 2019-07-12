@@ -1,8 +1,8 @@
 #ifndef __PIZZA_STORE_H__
 #define __PIZZA_STORE_H__
 
-#include <Factory/Pizza.h>
-#include <Factory/SimplePizzaFactory.h>
+#include <Pizza.h>
+#include <SimplePizzaFactory.h>
 #include <string>
 
 class PizzaStore {

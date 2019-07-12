@@ -1,6 +1,6 @@
-#include <Factory/Pizza.h>
-#include <Factory/PizzaStore.h>
-#include <Factory/SimplePizzaFactory.h>
+#include <Pizza.h>
+#include <PizzaStore.h>
+#include <SimplePizzaFactory.h>
 
 int main(int argc, char *argv[]) {
   auto *factory = new SimplePizzaFactory();

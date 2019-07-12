@@ -1,11 +1,11 @@
 #ifndef __SIMPLE_PIZZA_FACTORY_H__
 #define __SIMPLE_PIZZA_FACTORY_H__
 
-#include <Factory/CheesePizza.h>
-#include <Factory/ClamPizza.h>
-#include <Factory/PepperoniPizza.h>
-#include <Factory/Pizza.h>
-#include <Factory/VeggiePizza.h>
+#include <CheesePizza.h>
+#include <ClamPizza.h>
+#include <PepperoniPizza.h>
+#include <Pizza.h>
+#include <VeggiePizza.h>
 #include <string>
 
 class SimplePizzaFactory {
