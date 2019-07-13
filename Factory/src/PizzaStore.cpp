@@ -1,9 +1,11 @@
 #include <PizzaStore.h>
 
-PizzaStore::PizzaStore(SimplePizzaFactory *factory) { this->factory = factory; }
+PizzaStore::PizzaStore(std::unique_ptr<SimplePizzaFactory> factory) {
+  this->factory = std::move(factory);
+}
 
-Pizza *PizzaStore::orderPizza(std::string type) {
-  Pizza *pizza;
+std::unique_ptr<Pizza> PizzaStore::orderPizza(std::string type) {
+  std::unique_ptr<Pizza> pizza;
 
   pizza = factory->createPizza(type);
 
@@ -12,5 +14,5 @@ Pizza *PizzaStore::orderPizza(std::string type) {
   pizza->cut();
   pizza->box();
 
-  return pizza;
+  return std::move(pizza);
 }

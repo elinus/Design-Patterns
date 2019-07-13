@@ -1,12 +1,13 @@
 #include <Pizza.h>
 #include <PizzaStore.h>
 #include <SimplePizzaFactory.h>
+#include <memory>
 
 int main(int argc, char *argv[]) {
-  auto *factory = new SimplePizzaFactory();
-  auto *store = new PizzaStore(factory);
+  std::unique_ptr<SimplePizzaFactory> factory(new SimplePizzaFactory());
+  std::unique_ptr<PizzaStore> store(new PizzaStore(std::move(factory)));
 
-  Pizza *pizza = store->orderPizza("cheese");
+  std::unique_ptr<Pizza> pizza = store->orderPizza("cheese");
   std::cout << "We ordered a " << pizza->getName() << "\n";
   std::cout << pizza->toString() << "\n";
 

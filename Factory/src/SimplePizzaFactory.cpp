@@ -1,16 +1,20 @@
 #include <SimplePizzaFactory.h>
 
-Pizza *SimplePizzaFactory::createPizza(std::string type) {
-  Pizza *pizza = nullptr;
+std::unique_ptr<Pizza> SimplePizzaFactory::createPizza(std::string type) {
+  std::unique_ptr<Pizza> pizza;
 
   if (type == "cheese") {
-    pizza = new CheesePizza();
+    std::unique_ptr<CheesePizza> cheezePizza(new CheesePizza());
+    pizza = std::move(cheezePizza);
   } else if (type == "pepperoni") {
-    pizza = new PepperoniPizza();
+    std::unique_ptr<PepperoniPizza> pepperoniPizza(new PepperoniPizza());
+    pizza = std::move(pepperoniPizza);
   } else if (type == "clam") {
-    pizza = new ClamPizza();
+    std::unique_ptr<ClamPizza> clamPizza(new ClamPizza());
+    pizza = std::move(clamPizza);
   } else if (type == "veggie") {
-    pizza = new VeggiePizza();
+    std::unique_ptr<VeggiePizza> veggiePizza(new VeggiePizza());
+    pizza = std::move(veggiePizza);
   }
-  return pizza;
+  return std::move(pizza);
 }
