@@ -1,8 +1,8 @@
 #ifndef __SOLD_STATE_H__
 #define __SOLD_STATE_H__
 
-#include "GumballMachine.h"
-#include "State.h"
+#include <GumballMachine.h>
+#include <State.h>
 #include <iostream>
 #include <string>
 

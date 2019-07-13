@@ -1,14 +1,14 @@
-#ifndef __HAS_QUARTER_STATE_H__
-#define __HAS_QUARTER_STATE_H__
+#ifndef __NO_QUARTER_STATE_H__
+#define __NO_QUARTER_STATE_H__
 
-#include "GumballMachine.h"
-#include "State.h"
+#include <GumballMachine.h>
+#include <State.h>
 #include <iostream>
 #include <string>
 
-class HasQuarterState : public State {
+class NoQuarterState : public State {
 public:
-  HasQuarterState(GumballMachine *gumballMachine);
+  NoQuarterState(GumballMachine *gumballMachine);
   // Inherited via State
   void insertQuarter() override;
   void ejectQuarter() override;
@@ -21,4 +21,4 @@ private:
   GumballMachine *gumballMachine;
 };
 
-#endif // !__HAS_QUARTER_STATE_H__
+#endif // !__NO_QUARTER_STATE_H__

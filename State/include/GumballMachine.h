@@ -1,7 +1,7 @@
 #ifndef __GUMBALL_MACHINE_H__
 #define __GUMBALL_MACHINE_H__
 
-#include "State.h"
+#include <State.h>
 #include <iostream>
 #include <string>
 

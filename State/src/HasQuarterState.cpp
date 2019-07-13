@@ -1,4 +1,4 @@
-#include <State/HasQuarterState.h>
+#include <HasQuarterState.h>
 
 HasQuarterState::HasQuarterState(GumballMachine *gumballMachine) {
   this->gumballMachine = gumballMachine;

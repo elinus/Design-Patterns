@@ -1,9 +1,9 @@
-#include <State/GumballMachine.h>
-#include <State/HasQuarterState.h>
-#include <State/NoQuarterState.h>
-#include <State/SoldOutState.h>
-#include <State/SoldState.h>
-#include <State/State.h>
+#include <GumballMachine.h>
+#include <HasQuarterState.h>
+#include <NoQuarterState.h>
+#include <SoldOutState.h>
+#include <SoldState.h>
+#include <State.h>
 
 GumballMachine::GumballMachine(int numberGumballs) {
   soldOutState = new SoldOutState(this);

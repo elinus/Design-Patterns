@@ -1,4 +1,4 @@
-#include <State/SoldOutState.h>
+#include <SoldOutState.h>
 
 SoldOutState::SoldOutState(GumballMachine *gumballMachine) {
   this->gumballMachine = gumballMachine;

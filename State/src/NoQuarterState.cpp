@@ -1,4 +1,4 @@
-#include <State/NoQuarterState.h>
+#include <NoQuarterState.h>
 
 NoQuarterState::NoQuarterState(GumballMachine *gumballMachine) {
   this->gumballMachine = gumballMachine;

@@ -1,4 +1,4 @@
-#include <State/GumballMachine.h>
+#include <GumballMachine.h>
 #include <iostream>
 
 int main(int argc, char *argv[]) {
