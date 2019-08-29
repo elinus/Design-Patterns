@@ -1,4 +1,4 @@
-#include <Adapter/TurkeyAdapter.h>
+#include <TurkeyAdapter.h>
 
 TurkeyAdapter::TurkeyAdapter(Turkey *turkey) { this->turkey = turkey; }
 

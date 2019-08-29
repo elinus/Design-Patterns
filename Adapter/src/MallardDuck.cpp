@@ -1,4 +1,4 @@
-#include <Adapter/MallardDuck.h>
+#include <MallardDuck.h>
 
 void MallardDuck::quack() { std::cout << "Quack" << std::endl; }
 

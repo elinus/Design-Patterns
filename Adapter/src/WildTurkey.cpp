@@ -1,4 +1,4 @@
-#include <Adapter/WildTurkey.h>
+#include <WildTurkey.h>
 
 void WildTurkey::gobble() { std::cout << "Gobble gobble" << std::endl; }
 

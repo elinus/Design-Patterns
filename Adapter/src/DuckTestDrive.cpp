@@ -1,7 +1,7 @@
-#include <Adapter/Duck.h>
-#include <Adapter/MallardDuck.h>
-#include <Adapter/TurkeyAdapter.h>
-#include <Adapter/WildTurkey.h>
+#include <Duck.h>
+#include <MallardDuck.h>
+#include <TurkeyAdapter.h>
+#include <WildTurkey.h>
 #include <iostream>
 
 void testDuck(Duck *duck) {
