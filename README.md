@@ -1,6 +1,8 @@
 # Head-First-Design-Patterns [C++]
 
-## Strategy Pattern
+---
+
+#### Strategy Pattern
 * Definition
     ```sh
     The Strategy Pattern - defines a family of algorithms,
@@ -17,7 +19,9 @@
 
     - Fever composition over inheritence.
     ```
-## Observer Pattern
+---
+
+#### Observer Pattern
 * Definition
     ```sh
     The Observer Pattern - defines a one-to-many dependency
@@ -30,7 +34,9 @@
     that can handle changes because they minimize the interdependency
     between objects.
     ```
-## Decorator Pattern
+---
+
+#### Decorator Pattern
 * Definition
     ```sh
     The Decorator Pattern - attaches additional responsibilities to
@@ -42,7 +48,9 @@
     - Classes should be open for extension, but close for modification.
     
     ```
-##  S.O.L.I.D Principles
+---
+
+####  S.O.L.I.D Principles
 * Single Responsibility Principle(SRP)
     ```sh
     A class should have only one reason to change.
@@ -71,9 +79,4 @@
     - Abstractions should not depend on details. Details should depend on
     abstraction.
     ```
-
-
-
-
-
-
+---
