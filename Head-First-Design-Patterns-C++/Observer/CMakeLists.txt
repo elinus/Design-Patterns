@@ -1,22 +1,22 @@
 cmake_minimum_required(VERSION 3.10.2)
 
 set(CMAKE_C_COMPILER "clang")
-#set(CMAKE_CXX_COMPILER "clang++")
+set(CMAKE_CXX_COMPILER "clang++")
 set(CMAKE_CONFIGURATION_TYPE Debug)
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 project(Observer)
 
 add_compile_options(
-    -Wall
+    #-Wall
     #-Werror # treat all warning as errors
     #-Wextra # reasonable and standard
     #-Wunused # warn on anything being unused
     #-Wpedantic # warn if non-standard C++ is used
     #-Wshadow # warn the user if a variable declaration shadows one form a parent context
-    -Wnon-virtual-dtor # warn the user if a class with virtual 
+    #-Wnon-virtual-dtor # warn the user if a class with virtual 
     # functions has a non-virtual destructor. This
     # helps catch hard to track down memory errors
     #-Wold-style-cast # warn for c-style casts

@@ -9,14 +9,15 @@
 
 class ForecastDisplay : public Observer, public DisplayElement {
 public:
-  ForecastDisplay(Subject *weatherData);
+  explicit ForecastDisplay(Subject &weatherData);
+  ~ForecastDisplay();
   void update(float temperature, float humidity, float pressure) override;
-  void display() override;
+  void display() const override;
 
 private:
   float currentPressure = 29.92f;
   float lastPressure;
-  Subject *weatherData;
+  Subject &weatherData;
 };
 
 #endif

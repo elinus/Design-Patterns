@@ -6,7 +6,7 @@
 class DisplayElement {
 public:
   virtual ~DisplayElement() = default;
-  virtual void display() = 0;
+  virtual void display() const = 0;
 };
 
 #endif

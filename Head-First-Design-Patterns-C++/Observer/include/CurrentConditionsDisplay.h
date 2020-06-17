@@ -10,14 +10,15 @@
 
 class CurrentConditionsDisplay : public Observer, public DisplayElement {
 public:
-  CurrentConditionsDisplay(Subject *weatherData);
+  explicit CurrentConditionsDisplay(Subject &weatherData);
+  ~CurrentConditionsDisplay();
   void update(float temperature, float humidity, float pressure) override;
-  void display() override;
+  void display() const override;
 
 private:
   float temperature;
   float humidity;
-  Subject *weatherData;
+  Subject &weatherData;
 };
 
 #endif

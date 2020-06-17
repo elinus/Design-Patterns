@@ -1,9 +1,11 @@
 #include <HeatIndexDisplay.h>
 
-HeatIndexDisplay::HeatIndexDisplay(Subject *weatherData) {
-  this->weatherData = weatherData;
-  weatherData->registerObserver(this);
+HeatIndexDisplay::HeatIndexDisplay(Subject &weatherData)
+    : weatherData(weatherData), heatIndex(0.0f) {
+  weatherData.registerObserver(this);
 }
+
+HeatIndexDisplay::~HeatIndexDisplay() { weatherData.removeObserver(this); }
 
 float HeatIndexDisplay::computeHeatIndex(float t, float rh) {
   auto index =
@@ -26,6 +28,6 @@ void HeatIndexDisplay::update(float temperature, float humidity,
   display();
 }
 
-void HeatIndexDisplay::display() {
+void HeatIndexDisplay::display() const {
   std::cout << "Heat index is " << heatIndex << std::endl;
 }
