@@ -1,7 +1,3 @@
 #include <MuteQuack.h>
 
-MuteQuack::MuteQuack() = default;
-
-MuteQuack::~MuteQuack() = default;
-
-void MuteQuack::quack() { std::cout << "<< Silence >>" << std::endl; }
+void MuteQuack::quack() const { std::cout << "<< Silence >>" << std::endl; }

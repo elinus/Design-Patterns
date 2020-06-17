@@ -9,8 +9,7 @@
 class RubberDuck : public Duck {
 public:
   RubberDuck();
-  ~RubberDuck() override;
-  void display() override;
+  void display() const override;
 };
 
 #endif

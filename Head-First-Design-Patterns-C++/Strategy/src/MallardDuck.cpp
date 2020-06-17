@@ -1,15 +1,10 @@
 #include <MallardDuck.h>
 
 MallardDuck::MallardDuck() {
-  quackBehaviour = std::unique_ptr<QuackBehaviour>(new Quack());
-  flyBehaviour = std::unique_ptr<FlyBehaviour>(new FlyWithWings());
+  quackBehaviour = std::make_unique<Quack>();
+  flyBehaviour = std::make_unique<FlyWithWings>();
 }
 
-MallardDuck::~MallardDuck() {
-  // delete quackBehaviour;
-  // delete flyBehaviour;
-}
-
-void MallardDuck::display() {
+void MallardDuck::display() const {
   std::cout << "I'm a real Mallard duck" << std::endl;
 }

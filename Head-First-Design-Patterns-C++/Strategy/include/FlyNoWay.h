@@ -6,9 +6,7 @@
 
 class FlyNoWay : public FlyBehaviour {
 public:
-  FlyNoWay();
-  ~FlyNoWay() override;
-  void fly() override;
+  void fly() const override;
 };
 
 #endif

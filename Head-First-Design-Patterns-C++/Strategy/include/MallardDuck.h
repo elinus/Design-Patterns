@@ -9,8 +9,7 @@
 class MallardDuck : public Duck {
 public:
   MallardDuck();
-  ~MallardDuck() override;
-  void display() override;
+  void display() const override;
 };
 
 #endif

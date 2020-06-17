@@ -9,8 +9,7 @@
 class ModelDuck : public Duck {
 public:
   ModelDuck();
-  ~ModelDuck() override;
-  void display() override;
+  void display() const override;
 };
 
 #endif

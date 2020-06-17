@@ -1,15 +1,10 @@
 #include <ModelDuck.h>
 
 ModelDuck::ModelDuck() {
-  quackBehaviour = std::unique_ptr<QuackBehaviour>(new Quack());
-  flyBehaviour = std::unique_ptr<FlyBehaviour>(new FlyNoWay());
-  // quackBehaviour = new Quack();
-  // flyBehaviour = new FlyNoWay();
+  quackBehaviour = std::make_unique<Quack>();
+  flyBehaviour = std::make_unique<FlyNoWay>();
 }
 
-ModelDuck::~ModelDuck() {
-  // delete quackBehaviour;
-  // delete flyBehaviour;
+void ModelDuck::display() const {
+  std::cout << "I'm a model duck" << std::endl;
 }
-
-void ModelDuck::display() { std::cout << "I'm a model duck" << std::endl; }

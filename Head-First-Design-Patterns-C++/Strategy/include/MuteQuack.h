@@ -6,9 +6,7 @@
 
 class MuteQuack : public QuackBehaviour {
 public:
-  MuteQuack();
-  ~MuteQuack() override;
-  void quack() override;
+  void quack() const override;
 };
 
 #endif

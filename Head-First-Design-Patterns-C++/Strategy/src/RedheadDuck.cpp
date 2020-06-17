@@ -1,15 +1,10 @@
 #include <RedheadDuck.h>
 
 RedheadDuck::RedheadDuck() {
-  quackBehaviour = std::unique_ptr<QuackBehaviour>(new Quack());
-  flyBehaviour = std::unique_ptr<FlyBehaviour>(new FlyWithWings());
-  // quackBehaviour = new Quack();
-  // flyBehaviour = new FlyWithWings();
+  quackBehaviour = std::make_unique<Quack>();
+  flyBehaviour = std::make_unique<FlyWithWings>();
 }
 
-RedheadDuck::~RedheadDuck() {
-  // delete quackBehaviour;
-  // delete flyBehaviour;
+void RedheadDuck::display() const {
+  std::cout << "I'm a red head duck" << std::endl;
 }
-
-void RedheadDuck::display() { std::cout << "I'm a red head duck" << std::endl; }

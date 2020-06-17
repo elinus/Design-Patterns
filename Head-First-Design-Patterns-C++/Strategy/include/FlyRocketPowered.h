@@ -6,9 +6,7 @@
 
 class FlyRocketPowered : public FlyBehaviour {
 public:
-  FlyRocketPowered();
-  ~FlyRocketPowered() override;
-  void fly() override;
+  void fly() const override;
 };
 
 #endif

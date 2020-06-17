@@ -6,9 +6,7 @@
 
 class Squeak : public QuackBehaviour {
 public:
-  Squeak();
-  ~Squeak() override;
-  void quack() override;
+  void quack() const override;
 };
 
 #endif

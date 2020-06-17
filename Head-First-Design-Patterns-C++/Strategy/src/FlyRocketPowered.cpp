@@ -1,9 +1,5 @@
 #include <FlyRocketPowered.h>
 
-FlyRocketPowered::FlyRocketPowered() = default;
-
-FlyRocketPowered::~FlyRocketPowered() = default;
-
-void FlyRocketPowered::fly() {
+void FlyRocketPowered::fly() const {
   std::cout << "I'm flying with a rocket!" << std::endl;
 }

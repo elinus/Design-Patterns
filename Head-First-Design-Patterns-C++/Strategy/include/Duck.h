@@ -8,12 +8,12 @@
 
 class Duck {
 public:
-  Duck();
-  virtual ~Duck();
-  virtual void display() = 0;
-  void performFly();
-  void performQuack();
-  void swim();
+  Duck() = default;
+  virtual ~Duck() = default;
+  virtual void display() const = 0;
+  void performFly() const;
+  void performQuack() const;
+  void swim() const;
   void setFlyBehaviour(std::unique_ptr<FlyBehaviour> fb);
   void setQuackBehaviour(std::unique_ptr<QuackBehaviour> qb);
 

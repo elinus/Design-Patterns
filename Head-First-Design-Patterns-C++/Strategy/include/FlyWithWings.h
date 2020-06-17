@@ -6,9 +6,7 @@
 
 class FlyWithWings : public FlyBehaviour {
 public:
-  FlyWithWings();
-  ~FlyWithWings() override;
-  void fly() override;
+  void fly() const override;
 };
 
 #endif

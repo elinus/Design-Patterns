@@ -1,15 +1,10 @@
 #include <RubberDuck.h>
 
 RubberDuck::RubberDuck() {
-  quackBehaviour = std::unique_ptr<QuackBehaviour>(new Squeak());
-  flyBehaviour = std::unique_ptr<FlyBehaviour>(new FlyNoWay());
-  // quackBehaviour = new Squeak();
-  // flyBehaviour = new FlyNoWay();
+  quackBehaviour = std::make_unique<Squeak>();
+  flyBehaviour = std::make_unique<FlyNoWay>();
 }
 
-RubberDuck::~RubberDuck() {
-  // delete quackBehaviour;
-  // delete flyBehaviour;
+void RubberDuck::display() const {
+  std::cout << "I'm a rubber duck" << std::endl;
 }
-
-void RubberDuck::display() { std::cout << "I'm a rubber duck" << std::endl; }

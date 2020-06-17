@@ -6,9 +6,7 @@
 
 class Quack : public QuackBehaviour {
 public:
-  Quack();
-  ~Quack() override;
-  void quack() override;
+  void quack() const override;
 };
 
 #endif

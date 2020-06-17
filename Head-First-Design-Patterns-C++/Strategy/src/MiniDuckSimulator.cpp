@@ -8,9 +8,7 @@
 #include <memory>
 
 int main() {
-  std::unique_ptr<Duck> duck(new MallardDuck());
-  // auto *mallard = new MallardDuck();
-  // duck = mallard;
+  std::unique_ptr<Duck> duck = std::make_unique<MallardDuck>();
   duck->performFly();
   duck->performQuack();
   duck->display();
@@ -18,9 +16,7 @@ int main() {
 
   std::cout << "\n";
 
-  duck = std::unique_ptr<Duck>(new RedheadDuck());
-  // auto *redhead = new RedheadDuck();
-  // duck = redhead;
+  duck = std::make_unique<RedheadDuck>();
   duck->performFly();
   duck->performQuack();
   duck->display();
@@ -28,9 +24,7 @@ int main() {
 
   std::cout << "\n";
 
-  duck = std::unique_ptr<Duck>(new RubberDuck());
-  // auto *rubber = new RubberDuck();
-  // duck = rubber;
+  duck = std::make_unique<RubberDuck>();
   duck->performFly();
   duck->performQuack();
   duck->display();
@@ -38,9 +32,7 @@ int main() {
 
   std::cout << "\n";
 
-  duck = std::unique_ptr<Duck>(new DecoyDuck());
-  // auto *decoy = new DecoyDuck();
-  // duck = decoy;
+  duck = std::make_unique<DecoyDuck>();
   duck->performFly();
   duck->performQuack();
   duck->display();
@@ -48,18 +40,10 @@ int main() {
 
   std::cout << "\n";
 
-  duck = std::unique_ptr<Duck>(new ModelDuck());
-  // auto *model = new ModelDuck();
-  // duck = model;
+  duck = std::make_unique<ModelDuck>();
   duck->performFly();
-  duck->setFlyBehaviour(std::unique_ptr<FlyBehaviour>(new FlyRocketPowered()));
+  duck->setFlyBehaviour(std::make_unique<FlyRocketPowered>());
   duck->performFly();
-
-  // delete mallard;
-  // delete redhead;
-  // delete rubber;
-  // delete decoy;
-  // delete model;
 
   return 0;
 }
