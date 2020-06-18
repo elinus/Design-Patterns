@@ -1,5 +1,5 @@
 #include <DarkRoast.h>
 
-DarkRoast::DarkRoast() { description = "Dark Roast Coffee"; }
+std::string DarkRoast::getDescription() const { return "Dark Roast Coffee"; }
 
-double DarkRoast::cost() { return 0.99; }
+double DarkRoast::cost() const { return 0.99; }

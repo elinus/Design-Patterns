@@ -1,9 +1,9 @@
-cmake_minimum_required(VERSION 3.4.1)
+cmake_minimum_required(VERSION 3.10.2)
 
 set(CMAKE_C_COMPILER "clang")
 set(CMAKE_CXX_COMPILER "clang++")
 set(CMAKE_CONFIGURATION_TYPE Debug)
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
@@ -16,7 +16,6 @@ include_directories(include)
 add_executable(
     a.out
 
-    src/Beverage.cpp
     src/Espresso.cpp
     src/HouseBlend.cpp
     src/DarkRoast.cpp

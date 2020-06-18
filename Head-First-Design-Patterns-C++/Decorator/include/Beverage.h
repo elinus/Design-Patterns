@@ -6,9 +6,8 @@
 class Beverage {
 public:
   virtual ~Beverage() = default;
-  std::string description = "Unknown Beverage";
-  virtual std::string getDescription();
-  virtual double cost() = 0;
+  virtual std::string getDescription() const = 0;
+  virtual double cost() const = 0;
 };
 
 #endif

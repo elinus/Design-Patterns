@@ -5,12 +5,9 @@
 
 class Milk : public CondimentDecorator {
 public:
-  Milk(Beverage *beverage);
-  std::string getDescription() override;
-  double cost() override;
-
-private:
-  Beverage *beverage;
+  Milk(std::unique_ptr<Beverage> beverage);
+  std::string getDescription() const override;
+  double cost() const override;
 };
 
 #endif

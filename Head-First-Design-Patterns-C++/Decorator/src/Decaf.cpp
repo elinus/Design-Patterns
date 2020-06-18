@@ -1,5 +1,5 @@
 #include <Decaf.h>
 
-Decaf::Decaf() { description = "Decaf coffee"; }
+std::string Decaf::getDescription() const { return "Decaf coffee"; }
 
-double Decaf::cost() { return 1.05; }
+double Decaf::cost() const { return 1.05; }

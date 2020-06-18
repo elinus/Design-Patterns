@@ -1,5 +1,5 @@
 #include <Espresso.h>
 
-Espresso::Espresso() { description = "Espresso"; }
+std::string Espresso::getDescription() const { return "Espresso"; }
 
-double Espresso::cost() { return 1.99; }
+double Espresso::cost() const { return 1.99; }

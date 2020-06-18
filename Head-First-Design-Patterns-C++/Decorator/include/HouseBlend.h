@@ -5,8 +5,8 @@
 
 class HouseBlend : public Beverage {
 public:
-  HouseBlend();
-  double cost() override;
+  std::string getDescription() const override;
+  double cost() const override;
 };
 
 #endif

@@ -1,9 +1,10 @@
 #include <Whip.h>
 
-Whip::Whip(Beverage *beverage) { this->beverage = beverage; }
+Whip::Whip(std::unique_ptr<Beverage> beverage)
+    : CondimentDecorator(std::move(beverage)) {}
 
-std::string Whip::getDescription() {
+std::string Whip::getDescription() const {
   return beverage->getDescription() + ", Whip";
 }
 
-double Whip::cost() { return beverage->cost() + 0.10; }
+double Whip::cost() const { return beverage->cost() + 0.10; }
