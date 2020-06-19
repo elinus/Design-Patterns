@@ -1,21 +1,18 @@
 #include <Singleton.h>
 
-std::mutex Singleton::sLock;
-std::unique_ptr<Singleton> Singleton::sInstance = nullptr;
+std::mutex Singleton::singletonMutex;
+std::shared_ptr<Singleton> Singleton::instance;
 
-Singleton::Singleton() {}
-
-std::unique_ptr<Singleton> Singleton::getInstance() {
-  if (sInstance == nullptr) {
-    sLock.lock();
-    if (sInstance == nullptr) {
-      sInstance = std::unique_ptr<Singleton>(new Singleton());
+std::shared_ptr<Singleton> Singleton::getInstance() {
+    if (instance == nullptr) {
+        std::lock_guard<std::mutex> lk(singletonMutex);
+        if (instance == nullptr) {
+            instance.reset(new Singleton());
+        }
     }
-    sLock.unlock();
-  }
-  return std::move(sInstance);
+    return instance;
 }
 
 std::string Singleton::getDescription() {
-  return std::string("I'm a thread safe Singleton!");
+    return std::string("I'm a thread safe Singleton!");
 }
